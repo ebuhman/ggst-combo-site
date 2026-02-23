@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGST Combo Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!--
+        This is the ONLY html file in the whole site.
+        It's intentionally almost empty.
+
+        Instead of having separate html pages (like starters.html, combos.html),
+        JavaScript will build and swap out the content inside #app dynamically.
+        This is called a "Single Page Application" (SPA).
+    -->
+
+    <div id="app">
+        <!-- JavaScript will inject all page content here -->
+    </div>
+
+    <!--
+        We load app.js as a "module" so that import/export works between our JS files.
+        type="module" also means this script loads AFTER the HTML above is ready,
+        so JavaScript can safely find #app without any timing issues.
+    -->
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

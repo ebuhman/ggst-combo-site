@@ -1,0 +1,48 @@
+/*
+    styles.css
+    ----------
+    All visual styling lives here.
+    JavaScript handles logic; CSS handles appearance.
+    You'll link specific class names to elements in your JS files,
+    then style those class names here.
+*/
+
+/* =====================
+   CSS VARIABLES
+   These let you define colors/sizes once and reuse them everywhere.
+   Change a value here and it updates across the whole site.
+   ===================== */
+:root {
+    --color-bg: #0d0d0d;
+    --color-surface: #1a1a1a;
+    --color-accent: #e63946;
+    --color-text: #f0f0f0;
+    --color-muted: #888;
+    --font-main: sans-serif;
+}
+
+/* Basic reset so browsers behave consistently */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+}
+
+/* The single container JavaScript renders everything into */
+#app {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* =====================
+   ADD YOUR OWN STYLES BELOW
+   As you build each component in JavaScript, come back here
+   and add styles for the class names you create.
+   ===================== */
