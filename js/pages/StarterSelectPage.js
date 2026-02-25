@@ -3,15 +3,6 @@
     -----------------------------
     Builds the landing page — a grid of buttons, one per combo starter.
     Clicking a button navigates to that starter's combo page.
-
-    HINTS:
-    - document.createElement() creates a new HTML element
-    - element.classList.add() gives an element a CSS class
-    - element.textContent sets the text inside an element
-    - parent.appendChild(child) adds a child inside a parent
-    - Array.forEach() runs a function once per item in an array
-    - addEventListener("click", () => {}) listens for a button click
-    - Template literals: `hello ${variable}` embeds variables in strings
 */
 
 export class StarterSelectPage {

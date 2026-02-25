@@ -4,14 +4,6 @@
     Displays all combos for a given starter.
     Finds the matching starter from the character data,
     then creates one ComboCard per combo.
-
-    HINTS:
-    - Array.find() returns the first item in an array where a condition is true
-      e.g. array.find((item) => item.id === someId)
-    - Array.filter() returns a new array of only items where a condition is true
-    - The spread operator (...) combines arrays: [...arrayA, ...arrayB]
-    - Array.forEach() loops over an array to build elements
-    - Import ComboCard at the top so you can use it here
 */
 
 import { ComboCard } from "../components/ComboCard.js";
@@ -19,29 +11,64 @@ import { ComboCard } from "../components/ComboCard.js";
 export class ComboDetailPage {
 
     constructor(character, starterId, router) {
-        // TODO: store character and router on this
-        // TODO: use Array.find() to locate the right starter by its id
-        //       and store it as this.starter
+        this.character = character;
+        /* Search through character.starters and check if each one's id matches 
+        the starterId that was passed into the constructor. Return the first one as this.starter */
+        this.starter = character.starters.find((starter) => {
+            return starter.id === starterId;
+        })
+        this.router = router;
     }
 
     render() {
-        // TODO: create the outer page container div
+        const page = document.createElement("div");
+        page.classList.add("outer-page"); 
 
-        // TODO: if this.starter wasn't found, show an error message and return early
+        if (!this.starter) // if this.starter is null send error message and return
+        {
+            const error = document.createElement("p");
+            error.textContent = "Error | starter not found";
+            page.appendChild(error);
+            return page;
+        }
 
-        // TODO: create a back button that calls this.router.navigate("/") on click
+        const button = document.createElement("button");
+        button.addEventListener("click", () => {
+            this.router.navigate("/")
+        });
+        button.textContent = "Back";
+        page.appendChild(button);
 
-        // TODO: create an h1 heading showing the starter input (e.g. "5P Combos")
+        const heading = document.createElement("h1");
+        heading.textContent = `${this.starter.input} Combos`; // e.g "5P Combos"
+        page.appendChild(heading);
 
-        // TODO: create a paragraph showing the situation (e.g. "Situation: Standing")
-
-        // TODO: create a container div for the combo list
+        const paragraph = document.createElement("p");
+        paragraph.textContent = `Situation: ${this.starter.situation}` // e.g "Situation: Standing"
+        page.appendChild(paragraph);
+       
+        // Second div for combo list
+        const comboList = document.createElement("div");
+        comboList.classList.add("combo-list");
 
         // TODO: use filter() to separate optimal and non-optimal combos
-        // TODO: combine them with spread so optimal combos appear first
-        // TODO: loop over the sorted combos, create a ComboCard for each,
-        //       and append it to the combo list container
+        const optimal = this.starter.combos.filter((optimalCombo) => {
+            return optimalCombo.isOptimal;
+        });
 
-        // TODO: append everything to the page and return it
+        const other = this.starter.combos.filter((otherCombo) => {
+            return !otherCombo.isOptimal;
+        });
+
+        const sortedCombos = [...optimal, ...other]; // Combined list with optimal combos first
+
+        // Loop over each combo and create a card for ComboCard
+        sortedCombos.forEach((combo) => {
+            const card = new ComboCard(combo);
+            comboList.appendChild(card.render())
+        });
+        
+        page.appendChild(comboList);
+        return page;
     }
 }
