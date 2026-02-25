@@ -1,0 +1,19 @@
+W3 Schools
+
+Fireship
+
+https://www.geeksforgeeks.org/javascript/javascript-map/ 
+
+https://www.w3schools.com/js/js_htmldom_eventlistener.asp 
+
+https://developer.mozilla.org/en-US/docs/Web/API/History/pushState 
+
+https://www.w3schools.com/js/js_arrays.asp 
+
+https://www.w3schools.com/js/js_htmldom_document.asp 
+
+https://www.w3schools.com/jsref/dom_obj_all.asp
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse 
+
+https://www.w3schools.com/react/react_render.asp 

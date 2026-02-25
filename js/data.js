@@ -75,9 +75,20 @@ export const characterData = {
             id: "2K",
             input: "2K",
             label: "2K Starter",
-            situation: "Crouching",
+            situation: "On the ground",
             combos: [
-                // TODO: Fill in combos for this starter
+                {
+                    id: "2K knockdown",
+                    notationString: "2K > 2D",
+                    damage: 0,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "Grounded",
+                    isOptimal: false,
+                    notes: "Basic hard knockdown into okizeme",
+                    videoUrl: "Placeholder.webm",
+                    videoFallbackImage: "Placholder.png"
+                }
             ]
         }
     ]
