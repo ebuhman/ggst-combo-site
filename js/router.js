@@ -13,6 +13,7 @@
 export class Router {
 
     constructor() {
+        let starter = new Map();
         // TODO: create a Map to store routes
         // TODO: listen for the browser's popstate event
     }

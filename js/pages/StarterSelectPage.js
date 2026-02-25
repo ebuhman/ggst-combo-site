@@ -17,23 +17,48 @@
 export class StarterSelectPage {
 
     constructor(character, router) {
-        // TODO: store character and router on this
+        this.character = character;
+        this.router = router;
     }
 
     render() {
-        // TODO: create the outer page container div
-        // TODO: create and append an h1 heading with the character name
-        // TODO: create a grid container div
-        // TODO: loop over this.character.starters and build one button per starter
-        // TODO: append the grid to the page and return the page
+        // Creates <div class = "starter select page"> for css elements.
+        const page = document.createElement("div");
+        page.classList.add("starter-select-page");
+
+        const heading = document.createElement("h1");
+        heading.textContent = "Choose a starter"; // Sets the content in the heading
+        page.appendChild(heading); // Places heading in div file
+
+        const grid = document.createElement("div");
+        grid.classList.add("starter-grid");
+
+        // Itterates through each starter and makes a button for each one
+        this.character.starters.forEach((starter) => {
+            const button = this.buildStarterButton(starter);
+            grid.appendChild(button);
+        })
+
+        page.appendChild(grid);
+        return page;
     }
 
     buildStarterButton(starter) {
-        // TODO: create a button element
-        // TODO: create a span for the input notation (e.g. "5P")
-        // TODO: create a span for the friendly label (e.g. "Standing")
-        // TODO: append both spans to the button
-        // TODO: add a click event listener that calls this.router.navigate()
-        // TODO: return the button
+        const button = document.createElement("button"); 
+
+        const inputSpan = document.createElement("span"); // Basic text wrapper
+        inputSpan.textContent = starter.input; // e.g "5P"
+
+        const labelSpan = document.createElement("span"); 
+        labelSpan.textContent = starter.label; // e.g "5P starter"
+
+        button.appendChild(inputSpan);
+        button.appendChild(labelSpan);
+
+        // When button is clicked, navigate to the combos starter page path
+        button.addEventListener("click", () => {
+            this.router.navigate(`/combos/${starter.id}`)
+        }); 
+        return button;
     }
 }
