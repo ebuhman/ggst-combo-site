@@ -2,34 +2,46 @@
     js/router.js
     ------------
     Handles navigation between pages without reloading the browser.
-    
-    HINTS:
-    - You'll need a Map to store routes
-    - history.pushState() changes the URL without reloading
-    - window.addEventListener("popstate") handles the back button
-    - Paths starting with "/combos/" are dynamic and need the id extracted
 */
 
 export class Router {
 
     constructor() {
-        let starter = new Map();
-        // TODO: create a Map to store routes
-        // TODO: listen for the browser's popstate event
+        this.routes = new Map();
+        /* Uses the base window object to tell the window to listen to the popstate
+        or the back input since this is run by javascript. The window.location.pathname
+        is the current url that is passed in. So if you hit back to /combos/5P it 
+        places the string /combos/5P in that argument. Handle route does what it sounds like
+        and handles the execution of the webpage. */
+        window.addEventListener("popstate", () => {
+            this.handleRoute(window.location.pathname)
+        });
     }
 
-    registerRoute(path, handler) {
-        // TODO: store the path and handler in your Map
+    registerRoute(path, handler) { // Stores path and handler
+        this.routes.set(path, handler);
     }
 
-    navigate(path) {
-        // TODO: update the browser URL with history.pushState
-        // TODO: call handleRoute with the new path
+    navigate(path) { // Updates page when interacting with certain fields
+        history.pushState(null, "", path); 
+        this.handleRoute(path); 
     }
 
     handleRoute(path) {
-        // TODO: check if the path exists in your Map and call its handler
-        // TODO: handle dynamic "/combos/:id" paths by extracting the starter id
-        // TODO: fall back to "/" if no route matches
+        if (this.routes.has(path)) // Checks if exact match and calls it if so
+        {
+            const handler = this.routes.get(path);
+            handler();
+        }
+        else if (path.startsWith("/combos/")) // Checks for dynamic match and extracts the id
+        {
+            const starterId = path.replace("/combos/", "")
+            const handler = this.routes.get("/combos/:id")
+            handler(starterId);
+        }
+        else // falls back home
+        {
+            this.handleRoute("/");
+        }
     }
 }
