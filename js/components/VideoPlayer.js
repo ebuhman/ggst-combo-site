@@ -13,17 +13,34 @@
     - "error" fires on the video element if the file can't be loaded
 */
 
+// import { createElement } from "react";
+
 export class VideoPlayer {
 
     constructor(videoUrl, fallbackImageUrl) {
-        // TODO: store videoUrl and fallbackImageUrl on this
+        this.videoUrl = videoUrl;
+        this.fallbackImageUrl = fallbackImageUrl;
     }
 
     render() {
-        // TODO: create a wrapper div with class "video-wrapper"
-        // TODO: create a <video> element, set src, loop, muted, playsInline
-        // TODO: play the video on mouseenter, pause and reset on mouseleave
-        // TODO: on video error, replace it with a fallback <img> if one was provided
-        // TODO: return the wrapper
+        const videoWrapper = document.createElement("div");
+        videoWrapper.classList.add("video-wrapper");
+
+        const videoElement = document.createElement("video");
+        videoElement.src = this.videoUrl;
+        videoElement.loop = true;
+        videoElement.muted = true;
+        videoElement.playsInline = true;
+        videoWrapper.appendChild(videoElement);
+
+        videoWrapper.addEventListener("mouseenter", () => { // When mouse hovers, play video
+            videoElement.play().catch(() => {});
+        });
+        videoWrapper.addEventListener("mouseleave", () => { // When mouse leaves hover, pause
+            videoElement.pause();
+            videoElement.currentTime = 0;
+        });
+
+        return videoWrapper;
     }
 }
