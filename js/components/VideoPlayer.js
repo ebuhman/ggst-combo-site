@@ -41,6 +41,15 @@ export class VideoPlayer {
             videoElement.currentTime = 0;
         });
 
+        videoElement.addEventListener("error", () => {
+            videoWrapper.removeChild(videoElement);
+            if (this.fallbackImageUrl)
+            {
+                const img = document.createElement("img");
+                img.src = this.fallbackImageUrl;
+                videoWrapper.appendChild(img);
+            }
+        })
         return videoWrapper;
     }
 }

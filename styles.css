@@ -1,27 +1,29 @@
-/*
-    styles.css
-    ----------
-    All visual styling lives here.
-    JavaScript handles logic; CSS handles appearance.
-    You'll link specific class names to elements in your JS files,
-    then style those class names here.
-*/
+/* =====================
+   FONTS
+   ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
 
 /* =====================
    CSS VARIABLES
-   These let you define colors/sizes once and reuse them everywhere.
-   Change a value here and it updates across the whole site.
    ===================== */
 :root {
-    --color-bg: #0d0d0d;
-    --color-surface: #1a1a1a;
-    --color-accent: #e63946;
-    --color-text: #f0f0f0;
-    --color-muted: #888;
-    --font-main: sans-serif;
+    --color-bg:         #07080c;
+    --color-surface:    #0e1018;
+    --color-surface-2:  #141720;
+    --color-border:     #1e2235;
+    --color-accent:     #c8102e;
+    --color-accent-dim: rgba(200, 16, 46, 0.15);
+    --color-text:       #e8ecf5;
+    --color-muted:      #4e5670;
+    --color-muted-2:    #7a8299;
+    --font-display:     'Bebas Neue', sans-serif;
+    --font-body:        'Rajdhani', sans-serif;
+    --font-mono:        'Share Tech Mono', monospace;
 }
 
-/* Basic reset so browsers behave consistently */
+/* =====================
+   RESET & BASE
+   ===================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,18 +33,374 @@
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: var(--font-main);
-}
-
-/* The single container JavaScript renders everything into */
-#app {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
+    font-family: var(--font-body);
+    font-size: 16px;
+    min-height: 100vh;
+    /* Subtle diagonal slash pattern in background */
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(200, 16, 46, 0.015) 40px,
+        rgba(200, 16, 46, 0.015) 41px
+    );
 }
 
 /* =====================
-   ADD YOUR OWN STYLES BELOW
-   As you build each component in JavaScript, come back here
-   and add styles for the class names you create.
+   LAYOUT
    ===================== */
+#app {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+}
+
+/* =====================
+   SITE HEADER
+   ===================== */
+.site-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+}
+
+/* Glowing red underline on header */
+.site-header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: var(--color-accent);
+    box-shadow: 0 0 16px var(--color-accent);
+}
+
+.site-header h1 {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    letter-spacing: 0.08em;
+    color: var(--color-text);
+    line-height: 1;
+}
+
+.site-header h1 span {
+    color: var(--color-accent);
+}
+
+.character-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-muted);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+}
+
+/* =====================
+   STARTER SELECT PAGE
+   ===================== */
+.starter-select-page h1 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    letter-spacing: 0.12em;
+    color: var(--color-muted-2);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.starter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+.starter-button {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 1.25rem 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+    /* Diagonal slash in top right corner */
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+
+/* Red sweep line on hover */
+.starter-button::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: width 0.25s ease;
+}
+
+.starter-button:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--color-accent-dim);
+}
+
+.starter-button:hover::before {
+    width: 100%;
+}
+
+/* The big notation text e.g "5P" */
+.starter-input {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    line-height: 1;
+    display: block;
+}
+
+/* The smaller label e.g "5P Starter" */
+.starter-label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    display: block;
+}
+
+/* =====================
+   COMBO DETAIL PAGE
+   ===================== */
+.outer-page {
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Back button */
+.back-button {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    border-radius: 2px;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.back-button:hover {
+    color: var(--color-text);
+    border-color: var(--color-muted-2);
+}
+
+/* Page heading e.g "5P Combos" */
+.outer-page > h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+/* Situation label e.g "Situation: Airborne" */
+.outer-page > p {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+/* =====================
+   COMBO LIST
+   ===================== */
+.combo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* =====================
+   COMBO CARD
+   ===================== */
+.combo-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 1.5rem;
+    row-gap: 0.75rem;
+    position: relative;
+    transition: border-color 0.15s;
+}
+
+.combo-card:hover {
+    border-color: #2a3050;
+}
+
+/* Optimal cards get a red left border */
+.combo-card--optimal {
+    border-left: 3px solid var(--color-accent);
+}
+
+/* =====================
+   NOTATION ROW
+   ===================== */
+.notation-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.notation-token {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--color-text);
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.45rem;
+    border-radius: 2px;
+    letter-spacing: 0.03em;
+}
+
+.notation-arrow {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    padding: 0 0.1rem;
+}
+
+/* =====================
+   COMBO STATS
+   ===================== */
+.combo-stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.combo-stat {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--color-muted-2);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Dot separator between stats */
+.combo-stat + .combo-stat::before {
+    content: "·";
+    margin-right: 0.6rem;
+    color: var(--color-muted);
+}
+
+.optimal-badge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 0.15rem 0.45rem;
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--color-accent-dim);
+}
+
+/* =====================
+   COMBO NOTES
+   ===================== */
+.combo-notes {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-muted-2);
+    line-height: 1.5;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+/* =====================
+   VIDEO PLAYER
+   ===================== */
+.video-wrapper {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    width: 210px;
+    height: 118px;
+    background: #000;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    align-self: center;
+    cursor: pointer;
+}
+
+.combo-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-hint {
+    position: absolute;
+    bottom: 0.35rem;
+    right: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    pointer-events: none;
+}
+
+/* =====================
+   SCROLLBAR
+   ===================== */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted);
+}

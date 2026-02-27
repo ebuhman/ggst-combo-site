@@ -40,6 +40,7 @@ export class NotationParser {
             }
         // Else make a normal span for the notation
             const notationSpan = document.createElement("span");
+            notationSpan.classList.add("notation-token");
             notationSpan.textContent = token.display;
             notationRow.appendChild(notationSpan);
         });

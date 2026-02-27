@@ -54,7 +54,7 @@ export class ComboCard {
 
         function spanCreator(label, value) { // Helper function to display a label and value
             const spanStat = document.createElement("span");
-            spanStat.textContent = `${label} : ${value}`
+            spanStat.textContent = `${label} : ${value} `
             return spanStat;
         }
 

@@ -36,6 +36,7 @@ export class StarterSelectPage {
 
     buildStarterButton(starter) {
         const button = document.createElement("button"); 
+        button.classList.add("starter-button");
 
         const inputSpan = document.createElement("span"); // Basic text wrapper
         inputSpan.textContent = starter.input; // e.g "5P"
