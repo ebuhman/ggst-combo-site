@@ -28,6 +28,7 @@ export class ComboDetailPage {
         {
             const error = document.createElement("p");
             error.textContent = "Error | starter not found";
+            error.classList.add("error-message");
             page.appendChild(error);
             return page;
         }
@@ -46,6 +47,7 @@ export class ComboDetailPage {
 
         const paragraph = document.createElement("p");
         paragraph.textContent = `Situation: ${this.starter.situation}` // e.g "Situation: Standing"
+        paragraph.classList.add("situation-label");
         page.appendChild(paragraph);
        
         // Second div for combo list

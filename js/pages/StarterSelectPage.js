@@ -40,9 +40,11 @@ export class StarterSelectPage {
 
         const inputSpan = document.createElement("span"); // Basic text wrapper
         inputSpan.textContent = starter.input; // e.g "5P"
+        inputSpan.classList.add("starter-input");
 
         const labelSpan = document.createElement("span"); 
         labelSpan.textContent = starter.label; // e.g "5P starter"
+        labelSpan.classList.add("starter-label");
 
         button.appendChild(inputSpan);
         button.appendChild(labelSpan);

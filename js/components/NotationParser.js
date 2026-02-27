@@ -7,7 +7,7 @@
 
 export class NotationParser {
 
-    constructor(iconMap) {
+    constructor() {
         this.iconMap = { // Replaces shorthand with longer values
             "RC" : "Roman Cancel",
             "CH" : "Counter Hit",
@@ -30,11 +30,13 @@ export class NotationParser {
     render(notationString) {
         // creates div element for notation row and parses the notationString
         const notationRow = document.createElement("div");
+        notationRow.classList.add("notation-row");
         const tokens = this.parse(notationString);
         // For each value in the parsed tokens, if the index > 0 create a span for >
         tokens.forEach((token, index) => {
             if (index > 0) {
                 const separatorSpan = document.createElement("span");
+                separatorSpan.classList.add("notation-arrow");
                 separatorSpan.textContent = " > ";
                 notationRow.appendChild(separatorSpan);
             }

@@ -27,6 +27,7 @@ export class VideoPlayer {
         videoWrapper.classList.add("video-wrapper");
 
         const videoElement = document.createElement("video");
+        videoElement.classList.add("combo-video");
         videoElement.src = this.videoUrl;
         videoElement.loop = true;
         videoElement.muted = true;
