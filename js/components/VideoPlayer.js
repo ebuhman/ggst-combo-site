@@ -3,17 +3,7 @@
     ----------------------------
     Wraps a <video> element with hover-to-play behavior
     and a fallback image if the video fails to load.
-
-    HINTS:
-    - document.createElement("video") creates a video element
-    - video.play() returns a Promise — use .catch() to handle autoplay blocks
-    - video.currentTime = 0 resets the video to the beginning
-    - "mouseenter" fires when the cursor enters an element
-    - "mouseleave" fires when the cursor leaves an element
-    - "error" fires on the video element if the file can't be loaded
 */
-
-// import { createElement } from "react";
 
 export class VideoPlayer {
 

@@ -1,34 +1,9 @@
-/*
-    js/data.js
-    ----------
-    This file is your entire database.
-    It's just a plain JavaScript object holding all your combo information.
-
-    CONCEPT: Objects and Arrays
-    ---------------------------
-    - An OBJECT holds named properties:     { name: "Sol", damage: 100 }
-    - An ARRAY holds a list of items:       ["5P", "2K", "5H"]
-    - Objects and arrays can nest inside each other, which is how
-      we build up complex structured data like this.
-
-    CONCEPT: export
-    ---------------
-    The "export" keyword makes this data available to OTHER files.
-    Any file that wants to read combo data will "import" it from here.
-    Nothing else in the project should define combo data — it all lives here.
-*/
-
 export const characterData = {
 
     // The character's unique id. You'll use this in URLs like /combos/sol
     id: "slayer",
     name: "Slayer",
 
-    /*
-        "starters" is an array of combo starter objects.
-        Each starter represents one opening move or situation
-        that appears as a button on your StarterSelectPage.
-    */
     starters: [
         {
             id: "5P",              // used internally and in URLs
@@ -50,7 +25,7 @@ export const characterData = {
                     situation: "Airborne",
                     isOptimal: true,      // marks this as the recommended route
                     notes: "Far range anti air 5P route.",
-                    videoUrl: "/videos/5P/5P_Optimal.webm",  // path to your video file
+                    videoUrl: "/videos/P_Normals/5P/5P_Optimal.webm",  // path to your video file
                     videoFallbackImage: "/images/5P/GGST_Slayer_5P.png" // shown if video can't load
                 },
                 {
@@ -62,7 +37,7 @@ export const characterData = {
                     situation: "Airborne",
                     isOptimal: false,
                     notes: "Close range anti air 5P route. Will whiff if too far.",
-                    videoUrl: "/videos/5P/5P_C.SOptimal.webm",
+                    videoUrl: "/videos/P_Normals/5P/5P_C.SOptimal.webm",
                     videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
                 },
                 {
@@ -74,7 +49,7 @@ export const characterData = {
                     situation: "Airborne",
                     isOptimal: false,
                     notes: "Close range beginner anti air confirm.",
-                    videoUrl: null,
+                    videoUrl: "/videos/P_Normals/5P/5P_C.S.webm",
                     videoFallbackImage: null
                 },
                 {
@@ -86,13 +61,23 @@ export const characterData = {
                     situation: "Airborne",
                     isOptimal: false,
                     notes: "Universal anti air combo",
-                    videoUrl: null,
+                    videoUrl: "/videos/P_Normals/5P/5P_5K.webm",
                     videoFallbackImage: null,
                 }
             ]
         },
+        {
+            id: "5K",
+            input: "5K",
+            label: "5K Starter",
+            situation: "On the ground",
+            combos: [
+                {
 
-        // TODO: Add more starters here following the same structure
+                }
+
+            ]
+        }, 
         {
             id: "2K",
             input: "2K",
@@ -160,6 +145,116 @@ export const characterData = {
                     videoFallbackImage: null,
                 }
             ]
-        }
-    ]
-};
+        },
+        {
+            id: "C.S",
+            input: "C.S",
+            label: "C.S Starter",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+        {
+            id: "F.S",
+            input: "F.S",
+            label: "F.S Starter",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+        {
+            id: "2S",
+            input: "2S",
+            label: "2S Starter",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+        {
+            id: "5H",
+            input: "5H",
+            label: "5H Starter",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+        {
+            id: "6H",
+            input: "6H",
+            label: "6H Starter",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+        {
+            id: "2H",
+            input: "2H",
+            label: "2H Starter",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+        {
+            id: "P_Mappa",
+            input: "236P",
+            label: "236P Starter",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+        {
+            id: "K_Mappa",
+            input: "236K",
+            label: "236K Starter",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+        {
+            id: "Dandy",
+            input: "214X~X",
+            label: "Dandy Followup Startes",
+            situation: "On the ground",
+            combos: [
+                {
+
+                }
+
+            ]
+        }, 
+
+        ]
+    }
+
