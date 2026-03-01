@@ -45,10 +45,13 @@ export class ComboDetailPage {
         heading.textContent = `${this.starter.input} Combos`; // e.g "5P Combos"
         page.appendChild(heading);
 
-        const paragraph = document.createElement("p");
-        paragraph.textContent = `Situation: ${this.starter.situation}` // e.g "Situation: Standing"
-        paragraph.classList.add("situation-label");
-        page.appendChild(paragraph);
+        if (this.starter.situation)
+        {
+            const paragraph = document.createElement("p");
+            paragraph.textContent = `Situation: ${this.starter.situation}` // e.g "Situation: Standing"
+            paragraph.classList.add("situation-label");
+            page.appendChild(paragraph);
+        }
        
         // Second div for combo list
         const comboList = document.createElement("div");
