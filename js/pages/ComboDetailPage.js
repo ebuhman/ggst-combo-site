@@ -36,7 +36,7 @@ export class ComboDetailPage {
         const button = document.createElement("button");
         button.classList.add("back-button");
         button.addEventListener("click", () => {
-            this.router.navigate("/ggst-combo-site")
+            this.router.navigate("/PilebunkerLoops/")
         });
         button.textContent = "Back";
         page.appendChild(button);
