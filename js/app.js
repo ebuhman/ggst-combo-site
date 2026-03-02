@@ -24,11 +24,6 @@ function init() {
     header.appendChild(title);
     appContainer.appendChild(header);
 
-    const portrait = document.createElement("img");
-    portrait.src = "/images/Slayer_Guilty_Gear_Strive.webp";
-    portrait.classList.add("character-portrait");
-    appContainer.appendChild(portrait);
-
     const pageContainer = document.createElement("div");
     pageContainer.classList.add("page-container");
     appContainer.appendChild(pageContainer);
@@ -41,6 +36,11 @@ function init() {
     router.registerRoute("/", () => {
         // Create a wrapper so we can show both the description AND the selection list
         const homeWrapper = document.createElement("div");
+
+        const portrait = document.createElement("img");
+        portrait.src = "/images/Slayer_Guilty_Gear_Strive.webp";
+        portrait.classList.add("character-portrait");
+        homeWrapper.appendChild(portrait);
 
         const description = document.createElement("p");
         description.classList.add("description");
