@@ -228,7 +228,7 @@ export const characterData = {
                     meterCost: 0,
                     difficulty: "Easy",
                     situation: "Standing CH",
-                    isOptimal: true,
+                    isOptimal: false,
                     notes: "Counterhit confirm on standing opponents.",
                     videoUrl: null,
                     videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
@@ -347,8 +347,89 @@ export const characterData = {
             situation: "On the ground",
             combos: [
                 {
-
-                }
+                    id: "C.S-confirm",
+                    notationString: "C.S F.S > C.S 6H 214P~P",
+                    damage: null,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Slayer's bread and butter confirm. Can switch 6H for F.S(1) or 2S for resets.",
+                    videoUrl: null,
+                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "C.S-counterhit",
+                    notationString: "CH C.S 5[D] > C.S 214P~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: null,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "Optimal C.S confirm midscreen. If near wall, detatch after the last 2S to wallstick.",
+                    videoUrl: null,
+                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "C.S-corner-counterhit",
+                    notationString: "c.CH C.S 5[D] > C.S dl 2S 2H 214P~P > C.S F.S 5H 236K W!",
+                    damage: null,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "corner CH",
+                    isOptimal: true,
+                    notes: "Counterhit C.S confirm with corner advantage.",
+                    videoUrl: null,
+                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "C.S-universe",
+                    notationString: "Universe C.S 5[D] > 2S 214K~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: null,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "Universe",
+                    isOptimal: true,
+                    notes: "Universe C.S confirm.",
+                    videoUrl: null,
+                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "C.S-burst-punish",
+                    notationString: "C.S 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: null,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: true,
+                    notes: "Burst punish off of non 2H starters",
+                    videoUrl: null,
+                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "C.S-antiair",
+                    notationString: "C.S > 6 2S 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: null,
+                    meterCost: 0,
+                    difficulty: "Medium",
+                    situation: "Airborne",
+                    isOptimal: false,
+                    notes: "Universal anti air C.S confirm, works with both CH and normal hit with varried microwalks.",
+                    videoUrl: null,
+                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "C.S-metered-confirm",
+                    notationString: "C.S 6H 214P~P > 66FRC 214P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: null,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "Basic metered confirm midscreen",
+                    videoUrl: null,
+                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                },
 
             ]
         }, 
