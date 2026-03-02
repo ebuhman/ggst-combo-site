@@ -1,45 +1,26 @@
 export const characterData = {
 
-    // The character's unique id. You'll use this in URLs like /combos/sol
     id: "slayer",
     name: "Slayer",
 
     starters: [
         {
-            id: "5P",              // used internally and in URLs
-            input: "5P",          // the notation label shown on screen
-            label: "5P Starter",  // friendly name shown on the button
-            situation: "Airborne", // e.g. Standing, Crouching, Airborne, Counter Hit
-
-            /*
-                "combos" is an array of combo objects for THIS starter.
-                Each combo is what gets displayed on the ComboDetailPage.
-                Examples:
-                {
-                    id: ,
-                    notationString: ,
-                    damage: null,
-                    meterCost: 0,
-                    difficulty: ,
-                    situation: null,
-                    isOptimal: false,
-                    notes: ,
-                    videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
-                },
-            */
+            id: "5P",
+            input: "5P",
+            label: "5P Starter",
+            situation: "Airborne",
             combos: [
                 {
                     id: "5P-optimal-1",
-                    notationString: "5P > 2S dl 2H > 214P~P > C.S 2S dl 2H 214P~P > C.S 2S 2H 214P~P", // raw string, NotationParser will display this visually
+                    notationString: "5P > 2S dl 2H > 214P~P > C.S 2S dl 2H 214P~P > C.S 2S 2H 214P~P",
                     damage: 166,
-                    meterCost: 0,         // 0 = no meter, 50 = half, 100 = full bar
-                    difficulty: "Hard",   // Easy | Medium | Hard
+                    meterCost: 0,
+                    difficulty: "Hard",
                     situation: "Airborne",
-                    isOptimal: true,      // marks this as the recommended route
+                    isOptimal: true,
                     notes: "Far range anti air 5P route.",
-                    videoUrl: "/videos/P_Normals/5P/5P_Optimal.webm",  // path to your video file
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png" // shown if video can't load
+                    videoUrl: "videos/P_Normals/5P/5P_Optimal.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5P-optimal-2",
@@ -50,8 +31,8 @@ export const characterData = {
                     situation: "Airborne",
                     isOptimal: false,
                     notes: "Close range anti air 5P route. Will whiff if too far.",
-                    videoUrl: "/videos/P_Normals/5P/5P_C.SOptimal.webm",
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoUrl: "videos/P_Normals/5P/5P_C.SOptimal.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5P-beginner",
@@ -62,7 +43,7 @@ export const characterData = {
                     situation: "Airborne",
                     isOptimal: false,
                     notes: "Close range beginner anti air confirm.",
-                    videoUrl: "/videos/P_Normals/5P/5P_C.S.webm",
+                    videoUrl: "videos/P_Normals/5P/5P_C.S.webm",
                     videoFallbackImage: null
                 },
                 {
@@ -74,7 +55,7 @@ export const characterData = {
                     situation: "Airborne",
                     isOptimal: false,
                     notes: "Universal anti air combo",
-                    videoUrl: "/videos/P_Normals/5P/5P_5K.webm",
+                    videoUrl: "videos/P_Normals/5P/5P_5K.webm",
                     videoFallbackImage: null,
                 }
             ]
@@ -83,7 +64,7 @@ export const characterData = {
             id: "2P",
             input: "2P",
             label: "2P Starter",
-            Situation: "On the ground",
+            situation: "On the ground",
             combos: [
                 {
                     id: "2P-hit-confirm",
@@ -95,7 +76,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Basic hitconfirm on mashes. Can get up to 3 2P depending on initial spacing.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2P-counterhit",
@@ -107,7 +88,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Confirm from a counterhit 2P. Can use 2D in replacement for 236K, but when 2P is max range.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2P-counterhit-optimal",
@@ -119,7 +100,7 @@ export const characterData = {
                     isOptimal: true,
                     notes: "Close range counterhit confirm off of 2P.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2P-metered-hit-confirm",
@@ -131,7 +112,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Cashout confirm on 2P mash.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2P-counterhit-metered",
@@ -143,7 +124,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Counterhit 2P cashout combo.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
             ]
         },
@@ -151,7 +132,7 @@ export const characterData = {
             id: "6P",
             input: "6P",
             label: "6P Starter",
-            Situation: "Airborne",
+            situation: "Airborne",
             combos: [
                 {
                     id: "6P-hit-confirm",
@@ -163,7 +144,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Basic anti air confirm",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "6P-counterhit",
@@ -175,7 +156,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Basic anti air counterhit",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "6P-optimal-counterhit",
@@ -187,10 +168,10 @@ export const characterData = {
                     isOptimal: true,
                     notes: "At certain heights after a counterhit 6P, pilebunker will loop. Not consistent.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 }
             ]
-        },  
+        },
         {
             id: "5K",
             input: "5K",
@@ -207,7 +188,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Basic hitconfirm into oki.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5K-whiff-punish",
@@ -219,7 +200,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "5K whiff punish on ranges where 2D cannot reach",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5K-counterhit",
@@ -231,7 +212,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Counterhit confirm on standing opponents.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5K-metered-optimal",
@@ -239,11 +220,11 @@ export const characterData = {
                     damage: 0,
                     meterCost: 50,
                     difficulty: "Medium",
-                    situation: "midscreen",
+                    situation: "Midscreen",
                     isOptimal: true,
-                    notes: "Uiversal metered whiff punish.",
+                    notes: "Universal metered whiff punish.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5K-metered-hit-confirm",
@@ -255,7 +236,7 @@ export const characterData = {
                     isOptimal: true,
                     notes: "5K 2D metered hit-confirm",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5K-universe",
@@ -267,11 +248,10 @@ export const characterData = {
                     isOptimal: true,
                     notes: "Universe optimal confirm off of 5K.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
-
             ]
-        }, 
+        },
         {
             id: "2K",
             input: "2K",
@@ -288,7 +268,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Basic hard knockdown into okizeme",
                     videoUrl: null,
-                    videoFallbackImage: "Placholder"
+                    videoFallbackImage: null
                 },
                 {
                     id: "Counterhit-2K-confirm",
@@ -334,7 +314,7 @@ export const characterData = {
                     difficulty: "Easy",
                     situation: null,
                     isOptimal: false,
-                    notes: "For when you don't want to corner youself against a target with burst",
+                    notes: "For when you don't want to corner yourself against a target with burst",
                     videoUrl: null,
                     videoFallbackImage: null,
                 }
@@ -356,7 +336,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Slayer's bread and butter confirm. Can switch 6H for F.S(1) or 2S for resets.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-counterhit",
@@ -368,7 +348,7 @@ export const characterData = {
                     isOptimal: true,
                     notes: "Optimal C.S confirm midscreen. If near wall, detatch after the last 2S to wallstick.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-corner-counterhit",
@@ -376,11 +356,11 @@ export const characterData = {
                     damage: null,
                     meterCost: 0,
                     difficulty: "Hard",
-                    situation: "corner CH",
+                    situation: "Corner CH",
                     isOptimal: true,
                     notes: "Counterhit C.S confirm with corner advantage.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-universe",
@@ -392,7 +372,7 @@ export const characterData = {
                     isOptimal: true,
                     notes: "Universe C.S confirm.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-burst-punish",
@@ -404,7 +384,7 @@ export const characterData = {
                     isOptimal: true,
                     notes: "Burst punish off of non 2H starters",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-antiair",
@@ -414,9 +394,9 @@ export const characterData = {
                     difficulty: "Medium",
                     situation: "Airborne",
                     isOptimal: false,
-                    notes: "Universal anti air C.S confirm, works with both CH and normal hit with varried microwalks.",
+                    notes: "Universal anti air C.S confirm, works with both CH and normal hit with varied microwalks.",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-metered-confirm",
@@ -428,108 +408,65 @@ export const characterData = {
                     isOptimal: true,
                     notes: "Basic metered confirm midscreen",
                     videoUrl: null,
-                    videoFallbackImage: "/images/5P/GGST_Slayer_5P.png"
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
-
             ]
-        }, 
+        },
         {
             id: "F.S",
             input: "F.S",
             label: "F.S Starter",
             situation: "On the ground",
-            combos: [
-                {
-
-                }
-
-            ]
-        }, 
+            combos: []
+        },
         {
             id: "2S",
             input: "2S",
             label: "2S Starter",
             situation: "On the ground",
-            combos: [
-                {
-
-                }
-
-            ]
-        }, 
+            combos: []
+        },
         {
             id: "5H",
             input: "5H",
             label: "5H Starter",
             situation: "On the ground",
-            combos: [
-                {
-
-                }
-
-            ]
-        }, 
+            combos: []
+        },
         {
             id: "6H",
             input: "6H",
             label: "6H Starter",
             situation: "On the ground",
-            combos: [
-                {
-
-                }
-
-            ]
-        }, 
+            combos: []
+        },
         {
             id: "2H",
             input: "2H",
             label: "2H Starter",
             situation: "On the ground",
-            combos: [
-                {
-
-                }
-
-            ]
-        }, 
+            combos: []
+        },
         {
             id: "P_Mappa",
             input: "236P",
             label: "236P Starter",
             situation: "On the ground",
-            combos: [
-                {
-
-                }
-
-            ]
-        }, 
+            combos: []
+        },
         {
             id: "K_Mappa",
             input: "236K",
             label: "236K Starter",
             situation: "On the ground",
-            combos: [
-                {
-
-                }
-
-            ]
-        }, 
+            combos: []
+        },
         {
             id: "Dandy",
             input: "214X~X",
-            label: "Dandy Followup Startes",
+            label: "Dandy Followup Starters",
             situation: "On the ground",
-            combos: [
-                {
-
-                }
-
-            ]
-        }, 
-
-        ]
-    }
-
+            combos: []
+        },
+    ]
+};
