@@ -13,6 +13,7 @@ import { characterData } from "./data.js";
 import { StarterSelectPage } from "./pages/StarterSelectPage.js";
 import { ComboDetailPage } from "./pages/ComboDetailPage.js";
 import { ResourcePage } from "./pages/ResourcesPage.js";
+import { AboutPage } from "./pages/AboutPage.js";
 
 const BASE_URL = "/PilebunkerLoops"; // Created base url to pull from when loading videos
 const BASE = document.querySelector("base")?.href || "/PilebunkerLoops/";
@@ -34,7 +35,19 @@ function init() {
     resourcesButton.addEventListener("click", () => {
         router.navigate("/resources");
     });
-    header.appendChild(resourcesButton);
+
+    const aboutButton = document.createElement("button");
+    aboutButton.classList.add("resource-button");
+    aboutButton.textContent = "About";
+    aboutButton.addEventListener("click", () => {
+        router.navigate("/about");
+    });
+
+    const buttonRow = document.createElement("div");
+    buttonRow.classList.add("header-buttons");
+    buttonRow.appendChild(resourcesButton);
+    buttonRow.appendChild(aboutButton);
+    header.appendChild(buttonRow);
 
     appContainer.appendChild(header);
 
@@ -49,6 +62,7 @@ function init() {
 
     router.registerRoute("/", () => {
         resourcesButton.style.display = "";
+        aboutButton.style.display = "";
         // Create a wrapper so we can show both the description AND the selection list
         const homeWrapper = document.createElement("div");
 
@@ -71,14 +85,23 @@ function init() {
 
     router.registerRoute("/combos/:id", (starterId) => {
         resourcesButton.style.display = "none";
+        aboutButton.style.display = "none";
         const page = new ComboDetailPage(characterData, starterId, router);
         setPage(page.render());
     });
 
     router.registerRoute("/resources", () => {
-    resourcesButton.style.display = "none";
-    const page = new ResourcePage(router);
-    setPage(page.render());
+        resourcesButton.style.display = "none";
+        aboutButton.style.display = "none";
+        const page = new ResourcePage(router);
+        setPage(page.render());
+    });
+
+    router.registerRoute("/about", () => {
+        resourcesButton.style.display = "none";
+        aboutButton.style.display = "none";
+        const page = new AboutPage(router);
+        setPage(page.render());
     });
 
     router.handleRoute(window.location.pathname);
