@@ -509,7 +509,7 @@ export const characterData = {
                     situation: "Anywhere",
                     isOptimal: false,
                     notes: "Basic hit-confirm",
-                    videoUrl: "vhttps://res.cloudinary.com/dlts0xtuw/video/upload/v1773625750/F.S-hit-confirm_tzml0q.webm",
+                    videoUrl: "https://res.cloudinary.com/dlts0xtuw/video/upload/v1773625750/F.S-hit-confirm_tzml0q.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 }, 
                 {
