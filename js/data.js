@@ -4,6 +4,28 @@ export const characterData = {
     name: "Slayer",
 
     starters: [
+        /*
+        {
+            id: ,
+            input: ,
+            label: ,
+            situation: ,
+            combos: [ 
+                {
+                    id: ,
+                    notationString: ,
+                    damage: ,
+                    meterCost: 0,
+                    difficulty: ,
+                    situation: ,
+                    isOptimal: false,
+                    notes: ,
+                    videoUrl: ,
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+            ]
+        },  
+        */
         {
             id: "5P",
             input: "5P",
@@ -44,7 +66,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Close range beginner anti air confirm.",
                     videoUrl: "videos/P_Normals/5P/5P_C.S.webm",
-                    videoFallbackImage: null
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5P-beginner-2",
@@ -56,7 +78,7 @@ export const characterData = {
                     isOptimal: false,
                     notes: "Universal anti air combo",
                     videoUrl: "videos/P_Normals/5P/5P_5K.webm",
-                    videoFallbackImage: null,
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 }
             ]
         },
@@ -69,61 +91,61 @@ export const characterData = {
                 {
                     id: "2P-hit-confirm",
                     notationString: "2P > 2P 236K",
-                    damage: null,
+                    damage: 54,
                     meterCost: 0,
                     difficulty: "Easy",
                     situation: null,
                     isOptimal: false,
                     notes: "Basic hitconfirm on mashes. Can get up to 3 2P depending on initial spacing.",
-                    videoUrl: null,
+                    videoUrl: "videos/P_Normals/2P/2P-hit-confirm.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2P-counterhit",
                     notationString: "CH 2P > 5K 236K",
-                    damage: null,
+                    damage: 65,
                     meterCost: 0,
                     difficulty: "Easy",
                     situation: "CH",
                     isOptimal: false,
                     notes: "Confirm from a counterhit 2P. Can use 2D in replacement for 236K, but when 2P is max range.",
-                    videoUrl: null,
+                    videoUrl: "videos/P_Normals/2P/2P-counterhit.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2P-counterhit-optimal",
-                    notationString: "CH 2P > C.S F.S > 5K 236K",
-                    damage: null,
+                    notationString: "CH 2P > C.S 6H > 214P~P",
+                    damage: 112,
                     meterCost: 0,
                     difficulty: "Medium",
                     situation: "CH",
                     isOptimal: true,
                     notes: "Close range counterhit confirm off of 2P.",
-                    videoUrl: null,
+                    videoUrl: "videos/P_Normals/2P/2P-counterhit-optimal.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2P-metered-hit-confirm",
                     notationString: "2P > 2P 236K > 66RRC > 66 214K~P > C.S 2S 2H 214P~P",
-                    damage: null,
+                    damage: 128,
                     meterCost: 0,
                     difficulty: "Medium",
                     situation: null,
                     isOptimal: false,
                     notes: "Cashout confirm on 2P mash.",
-                    videoUrl: null,
+                    videoUrl: "videos/P_Normals/2P/2P-metered-hit-confirm.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2P-counterhit-metered",
                     notationString: "CH 2P > 5K 236K > 66RRC > 66 214K~P > C.S 2S 2H 214P~P",
-                    damage: null,
-                    meterCost: 0,
+                    damage: 148,
+                    meterCost: 50,
                     difficulty: "Medium",
                     situation: "CH",
-                    isOptimal: false,
+                    isOptimal: true,
                     notes: "Counterhit 2P cashout combo.",
-                    videoUrl: null,
+                    videoUrl: "videos/P_Normals/2P/2P-counterhit-metered.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
             ]
@@ -137,38 +159,62 @@ export const characterData = {
                 {
                     id: "6P-hit-confirm",
                     notationString: "6P 236K",
-                    damage: null,
+                    damage: 66,
                     meterCost: 0,
                     difficulty: "Easy",
                     situation: null,
                     isOptimal: false,
                     notes: "Basic anti air confirm",
-                    videoUrl: null,
+                    videoUrl: "videos/P_Normals/6P/6P-hit-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "6P-metered-confirm",
+                    notationString: "6P 66RRC > 5[D] > C.S 6H 214P~P",
+                    damage: 169,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Meter cashout 6P confirm",
+                    videoUrl: "videos/P_Normals/6P/6P-metered-confirm.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "6P-counterhit",
                     notationString: "CH 6P 214P~P",
-                    damage: null,
+                    damage: 96,
                     meterCost: 0,
                     difficulty: "Easy",
                     situation: "Airborne CH",
                     isOptimal: false,
                     notes: "Basic anti air counterhit",
-                    videoUrl: null,
+                    videoUrl: "videos/P_Normals/6P/6P-counterhit.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "6P-optimal-counterhit",
                     notationString: "CH 6P 214P~P > C.S 2S 2H 214P~P",
-                    damage: null,
+                    damage: 189,
                     meterCost: 0,
                     difficulty: "Medium",
-                    situation: "Airborne CH",
+                    situation: "CH",
                     isOptimal: true,
                     notes: "At certain heights after a counterhit 6P, pilebunker will loop. Not consistent.",
-                    videoUrl: null,
+                    videoUrl: "videos/P_Normals/6P/6P-counterhit-optimal.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "6P-metered-counterhit",
+                    notationString: "CH 6P 214P~P > 66FRC 214P > C.S 2S 2H 214P~P",
+                    damage: 189,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "Optimal confirm with meter if you can't get the meterless route.",
+                    videoUrl: "videos/P_Normals/6P/6P-metered-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png",
                 }
             ]
         },
@@ -181,61 +227,85 @@ export const characterData = {
                 {
                     id: "5K-knockdown",
                     notationString: "5K 2D",
-                    damage: null,
+                    damage: 52,
                     meterCost: 0,
                     difficulty: "Easy",
                     situation: null,
                     isOptimal: false,
                     notes: "Basic hitconfirm into oki.",
-                    videoUrl: null,
+                    videoUrl: "videos/K_Normals/5K/5K-knockdown.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
+                    id: "5K-antiair",
+                    notationString: "5K 6H 214P~P",
+                    damage: 124,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "Airborne",
+                    isOptimal: false,
+                    notes: "Confirm on pre-jump or roundstart.",
+                    videoUrl: "videos/K_Normals/5K/5K-antiair.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "5K-antiair-metered",
+                    notationString: "5K 6H 214P~P > 66FRC 214P > 4 C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 226,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: "Airborne",
+                    isOptimal: true,
+                    notes: "On the rare ocassion you have meter and hit 5K as an anti air. Without the microwalk the 2H will whiff.",
+                    videoUrl: "videos/K_Normals/5K/5K-antiair-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
                     id: "5K-whiff-punish",
                     notationString: "5K 236K",
-                    damage: null,
+                    damage: 64,
                     meterCost: 0,
                     difficulty: "Easy",
                     situation: null,
                     isOptimal: false,
                     notes: "5K whiff punish on ranges where 2D cannot reach",
-                    videoUrl: null,
+                    videoUrl: "videos/K_Normals/5K/5K-whiff-punish.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5K-counterhit",
                     notationString: "5K 6H 214P~P",
-                    damage: null,
+                    damage: 127,
                     meterCost: 0,
                     difficulty: "Easy",
-                    situation: "Standing CH",
+                    situation: "CH",
                     isOptimal: false,
                     notes: "Counterhit confirm on standing opponents.",
-                    videoUrl: null,
+                    videoUrl: "videos/K_Normals/5K/5K-counterhit.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5K-metered-optimal",
                     notationString: "5K 236K > 66RRC > 66 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
-                    damage: 0,
+                    damage: 216,
                     meterCost: 50,
                     difficulty: "Medium",
                     situation: "Midscreen",
                     isOptimal: true,
-                    notes: "Universal metered whiff punish.",
-                    videoUrl: null,
+                    notes: "Universal confirm midscreen with meter.",
+                    videoUrl: "videos/K_Normals/5K/5K-metered-optimal.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "5K-metered-hit-confirm",
                     notationString: "5K 2D 236P > 66FRC 2S 214K~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
-                    damage: 0,
+                    damage: 183,
                     meterCost: 50,
                     difficulty: "Hard",
                     situation: null,
                     isOptimal: true,
                     notes: "5K 2D metered hit-confirm",
-                    videoUrl: null,
+                    videoUrl: "videos/K_Normals/5K/5K-metered-hit-confirm.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
@@ -247,7 +317,7 @@ export const characterData = {
                     situation: "Universe",
                     isOptimal: true,
                     notes: "Universe optimal confirm off of 5K.",
-                    videoUrl: null,
+                    videoUrl: "videos/K_Normals/5K/5K-universe.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
             ]
@@ -267,8 +337,8 @@ export const characterData = {
                     situation: null,
                     isOptimal: false,
                     notes: "Basic hard knockdown into okizeme",
-                    videoUrl: null,
-                    videoFallbackImage: null
+                    videoUrl: "videos/K_Normals/2K/2K-knockdown.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "Counterhit-2K-confirm",
@@ -279,8 +349,8 @@ export const characterData = {
                     situation: "CH",
                     isOptimal: false,
                     notes: "Far counterhit confirm from 2K",
-                    videoUrl: null,
-                    videoFallbackImage: null
+                    videoUrl: "videos/K_Normals/2K/2K-counterhit-hit-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "Close-range-counterhit-2K",
@@ -291,20 +361,20 @@ export const characterData = {
                     situation: "CH",
                     isOptimal: true,
                     notes: "Close range counterhit 2K route.",
-                    videoUrl: null,
-                    videoFallbackImage: null
+                    videoUrl: "videos/K_Normals/2K/2K-close-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2K-metered-confirm",
-                    notationString: "2K 2D 236 > 66FRC 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    notationString: "2K 2D 236K > 66FRC 2S 2H 214P~P > C.S 2S 2H 214P~P",
                     damage: 141,
                     meterCost: 50,
                     difficulty: "Easy",
                     situation: null,
                     isOptimal: true,
                     notes: "Optimal metered 2K confirm with corner carry",
-                    videoUrl: null,
-                    videoFallbackImage: null
+                    videoUrl: "videos/K_Normals/2K/2K-metered-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "2K-metered-confirm-2",
@@ -315,8 +385,8 @@ export const characterData = {
                     situation: null,
                     isOptimal: false,
                     notes: "For when you don't want to corner yourself against a target with burst",
-                    videoUrl: null,
-                    videoFallbackImage: null,
+                    videoUrl: "videos/K_Normals/2K/2K-metered-confirm-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 }
             ]
         },
@@ -329,37 +399,37 @@ export const characterData = {
                 {
                     id: "C.S-confirm",
                     notationString: "C.S F.S > C.S 6H 214P~P",
-                    damage: null,
+                    damage: 168,
                     meterCost: 0,
                     difficulty: "Easy",
                     situation: null,
                     isOptimal: false,
                     notes: "Slayer's bread and butter confirm. Can switch 6H for F.S(1) or 2S for resets.",
-                    videoUrl: null,
+                    videoUrl: "videos/S_Normals/C.S/C.S-confirm.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-counterhit",
                     notationString: "CH C.S 5[D] > C.S 214P~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
-                    damage: null,
+                    damage: 250,
                     meterCost: 0,
                     difficulty: "Hard",
                     situation: "CH",
                     isOptimal: true,
                     notes: "Optimal C.S confirm midscreen. If near wall, detatch after the last 2S to wallstick.",
-                    videoUrl: null,
+                    videoUrl: "videos/S_Normals/C.S/C.S-counterhit.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-corner-counterhit",
                     notationString: "c.CH C.S 5[D] > C.S dl 2S 2H 214P~P > C.S F.S 5H 236K W!",
-                    damage: null,
+                    damage: 233,
                     meterCost: 0,
                     difficulty: "Hard",
                     situation: "Corner CH",
                     isOptimal: true,
                     notes: "Counterhit C.S confirm with corner advantage.",
-                    videoUrl: null,
+                    videoUrl: "videos/S_Normals/C.S/C.S-corner-counterhit.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
@@ -371,31 +441,43 @@ export const characterData = {
                     situation: "Universe",
                     isOptimal: true,
                     notes: "Universe C.S confirm.",
-                    videoUrl: null,
+                    videoUrl: "videos/S_Normals/C.S/C.S-universe.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-burst-punish",
                     notationString: "C.S 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
-                    damage: null,
+                    damage: 247,
                     meterCost: 0,
                     difficulty: "Easy",
-                    situation: null,
+                    situation: "Midscreen",
                     isOptimal: true,
                     notes: "Burst punish off of non 2H starters",
-                    videoUrl: null,
+                    videoUrl: "videos/S_Normals/C.S/C.S-burst-punish.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                 {
+                    id: "C.S-corner-burst-punish",
+                    notationString: "C.S dl 2S dl 214K~P > C.S 2H 214P~P > C.S F.S 5H 236K W!",
+                    damage: 231,
+                    meterCost: 0,
+                    difficulty: "Medium",
+                    situation: "Corner",
+                    isOptimal: true,
+                    notes: "Burst punish with corner advantage",
+                    videoUrl: "videos/S_Normals/C.S/C.S-corner-burst-punish.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
                     id: "C.S-antiair",
-                    notationString: "C.S > 6 2S 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
-                    damage: null,
+                    notationString: "CH C.S > 6 2S > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 241,
                     meterCost: 0,
                     difficulty: "Medium",
                     situation: "Airborne",
-                    isOptimal: false,
-                    notes: "Universal anti air C.S confirm, works with both CH and normal hit with varied microwalks.",
-                    videoUrl: null,
+                    isOptimal: true,
+                    notes: "Counterhit confirm, 2H will drop on big bodies",
+                    videoUrl: "videos/S_Normals/C.S/C.S-antiair.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
                 {
@@ -407,7 +489,7 @@ export const characterData = {
                     situation: "Midscreen",
                     isOptimal: true,
                     notes: "Basic metered confirm midscreen",
-                    videoUrl: null,
+                    videoUrl: "videos/S_Normals/C.S/C.S-metered-confirm.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 },
             ]
@@ -417,56 +499,705 @@ export const characterData = {
             input: "F.S",
             label: "F.S Starter",
             situation: "On the ground",
-            combos: []
+            combos: [
+                {
+                    id: "F.S-basic-confirm",
+                    notationString: "F.S 5H 236k",
+                    damage: 96,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "Anywhere",
+                    isOptimal: false,
+                    notes: "Basic hit-confirm",
+                    videoUrl: "videos/S_Normals/F.S/F.S-hit-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "F.S-roundstart",
+                    notationString: "F.S 5H 236D > 2S 214K~P > C.S 2S 2H 214P~P W!",
+                    damage: 132,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "Antiair",
+                    isOptimal: true,
+                    notes: "Beats certain airborne roundtstarts, also works when landing as an antiair.",
+                    videoUrl: "videos/S_Normals/F.S/F.S-roundstart.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "F.S-counterhit",
+                    notationString: "CH F.S 236[D] > 4 2S 214K~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214~P",
+                    damage: 151,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "Round start wallbreak using wild assault.",
+                    videoUrl: "videos/S_Normals/F.S/F.S-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "F.S-air-counterhit",
+                    notationString: "CH F.S > C.S 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 214,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "On rare ocassions, F.S will counterhit airborne opponents.",
+                    videoUrl: "videos/S_Normals/F.S/F.S-air-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+            ]
         },
         {
             id: "2S",
             input: "2S",
             label: "2S Starter",
             situation: "On the ground",
-            combos: []
+            combos: [
+                {
+                    id: "2S-confirm",
+                    notationString: "2S 2H 214P~P",
+                    damage: 120,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Basic confirm off of 2S",
+                    videoUrl: "videos/S_Normals/2S/2S-hit-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "2S-counterhit",
+                    notationString: "CH 2S 5H 214P~P",
+                    damage: 125,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "On counterhit, 5H will convert into pilebunker. Does 2 more damage than 2H.",
+                    videoUrl: "videos/S_Normals/2S/2S-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "2S-metered-confirm",
+                    notationString: "2S 2H 214P~P > 66FRC 214P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 222,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: true,
+                    notes: "2H will whiff on big bodies.",
+                    videoUrl: "videos/S_Normals/2S/2S-metered-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }
+            ]
         },
         {
             id: "5H",
             input: "5H",
             label: "5H Starter",
             situation: "On the ground",
-            combos: []
+            combos: [
+                {
+                    id: "5H-confirm",
+                    notationString: "5H 236K",
+                    damage: 83,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Basic hit confirm",
+                    videoUrl: "videos/H_Normals/5H/5H-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "5H-crouch-confirm",
+                    notationString: "5K 214P~P",
+                    damage: 110,
+                    meterCost: 0,
+                    difficulty: "Medium",
+                    situation: "Crouching",
+                    isOptimal: false,
+                    notes: "Crouch confirm, also works from 2S if crouching.",
+                    videoUrl: "videos/H_Normals/5H/5H-crouch-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "5H-counterhit",
+                    notationString: "CH 5H 214P > 2H 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 242,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "Do you want to explode?",
+                    videoUrl: "videos/H_Normals/5H/5H-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "5H-metered",
+                    notationString: "5H 236K > 66FRC > 2S dl 2H 214P~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 218,
+                    meterCost: 50,
+                    difficulty: "Hard",
+                    situation: null,
+                    isOptimal: true,
+                    notes: "First 2H must be manually delayed slightly, and the second 2S must have a micro delay.",
+                    videoUrl: "videos/H_Normals/5H/5H-metered-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+            ]
         },
         {
             id: "6H",
             input: "6H",
             label: "6H Starter",
             situation: "On the ground",
-            combos: []
+            combos: [
+                {
+                    id: "6H-confirm",
+                    notationString: "6H 214P~P",
+                    damage: 114,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Basic confirm",
+                    videoUrl: "videos/H_Normals/6H/6H-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "6H-counterhit",
+                    notationString: "CH 6H 214P > C.S 5[D] > C.S dl 2S dl 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 227,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "Both 2S and 2H will need manual delays of around the same frame. Too early and 2S or 2H will whiff or will not convert further.",
+                    videoUrl: "videos/H_Normals/6H/6H-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "6H-counterhit-2",
+                    notationString: "CH 6H > dl 632146-Dash-9P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 245,
+                    meterCost: 0,
+                    difficulty: "Impossible",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "I've been in this situation 3 times and hit the combo once, usually not worth going for. Micro delay on kara P Dandy.",
+                    videoUrl: "videos/H_Normals/6H/6H-counterhit-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "6H-metered-confirm",
+                    notationString: "6H 214P~P > 66FRC 214P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 242,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: true,
+                    notes: "Metered 6H confirm.",
+                    videoUrl: "videos/H_Normals/6H/6H-metered-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }
+            ]
         },
         {
             id: "2H",
             input: "2H",
             label: "2H Starter",
             situation: "On the ground",
-            combos: []
+            combos: [
+                {
+                    id: "2H-confirm",
+                    notationString: "2H 214P~P",
+                    damage: 108,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Basic confirm",
+                    videoUrl: "videos/H_Normals/2H/2H-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "2H-counterhit",
+                    notationString: "CH 2H 214P > C.S dl 2S dl 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 210,
+                    meterCost: 0,
+                    difficulty: "Medium",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "When 2H counterhits in the center of the hitbox.",
+                    videoUrl: "videos/H_Normals/2H/2H-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "2H-counterhit-2",
+                    notationString: "CH 2H 214P > C.S 2S 214K~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 222,
+                    meterCost: 0,
+                    difficulty: "Medium",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "The old counterhit route we know and love. Now only works when in close ranges.",
+                    videoUrl: "videos/H_Normals/2H/2H-counterhit-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "2H-metered-confirm",
+                    notationString: "2H 214P~P > 66FRC 214P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 236,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: true,
+                    notes: "Metered confirm off of 2H.",
+                    videoUrl: "videos/H_Normals/2H/2H-metered-confirm.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+            ]
         },
         {
-            id: "P_Mappa",
+            id: "5D",
+            input: "5D",
+            label: "5D Starter",
+            situation: null,
+            combos: [ 
+                {
+                    id: "5D-metered",
+                    notationString: "5D > 5[D] > C.S 6H 214P~P",
+                    damage: 131,
+                    meterCost: 50,
+                    difficulty: "Medium",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Basic confirm",
+                    videoUrl: "videos/DustAttacks/5D/5D-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "5D-metered-2",
+                    notationString: "5D > 66RRC > 2K > dl 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 161,
+                    meterCost: 50,
+                    difficulty: "Hard",
+                    situation: "Midscren",
+                    isOptimal: true,
+                    notes: "Whiffing the 2K sets up the manual extension similar to other RRC combos.",
+                    videoUrl: "videos/DustAttacks/5D/5D-metered-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "5D-universe",
+                    notationString: "Universe 5D > [6] C.S 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 168,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "Microwalk until you see Slayer move a frame.",
+                    videoUrl: "videos/DustAttacks/5D/5D-universe.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }
+            ]
+        },
+        {
+            id: "2D",
+            input: "2D",
+            label: "2D Starter",
+            situation: null,
+            combos: [ 
+                {
+                    id: "2D-counterhit",
+                    notationString: "CH 2D > C.S 5[D] > C.S 214P~P > C.S 2S 2H 214P~P",
+                    damage: 199,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "Basic roundstart confirm.",
+                    videoUrl: "videos/DustAttacks/2D/2D-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "2D-counterhit-2",
+                    notationString: "CH 2D > [6] C.S 2H 214P~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 208,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "Optimal round start confirm, to wallbreak, forego the last 2H and use 2S 214P W!.",
+                    videoUrl: "videos/DustAttacks/2D/2D-counterhit-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "2D-metered",
+                    notationString: "2S 236P > 66FRC 2S 214K~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214~P",
+                    damage: 187,
+                    meterCost: 50,
+                    difficulty: "Medium",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Basic hit confirm off of 2D.",
+                    videoUrl: "videos/DustAttacks/2D/2D-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "2D-metered-2",
+                    notationString: "2D > 66RRC > [4] 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 214,
+                    meterCost: 50,
+                    difficulty: "Hard",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "While possible to do a manual extension off of 2D, it is a different timing than the others, and is therefore not recommended.",
+                    videoUrl: "videos/DustAttacks/2D/2D-metered-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                
+            ]
+        },
+        {
+            id: "P-Mappa",
             input: "236P",
-            label: "236P Starter",
-            situation: "On the ground",
-            combos: []
-        },
+            label: "Pmappa Starter",
+            situation: null,
+            combos: [
+                {
+                    id: "236P-counterhit",
+                    notationString: "CH 236P > 2K 236K",
+                    damage: 77,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "Universal confirm midscreen or in the corner.",
+                    videoUrl: "videos/Specials/PMappa/236P-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "236P-corner-counterhit",
+                    notationString: "CH 236P > 2P 5P 6H 214P~P W!",
+                    damage: 110,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "Drops on Bridget, Jack-o, Johnny, May, Slayer, and Testament. Revert to 2K confirm or use meter against the mentioned characters.",
+                    videoUrl: "videos/Specials/PMappa/236P-corner-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "236P-metered",
+                    notationString: "236P > 66RRC 2S 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 188,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Universal metered confirm. Switch C.S 2H for C.S 2S against big bodies, which requires a different route in the corner.",
+                    videoUrl: "videos/Specials/PMappa/236P-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }, 
+                {
+                    id: "236P-optimal",
+                    notationString: "236P > 66RRC [4] 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 199,
+                    meterCost: 50,
+                    difficulty: "Hard",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "Can substitute the walk back pilebunker extension with the other manual timed pilebunker extension using 214K~dlP.",
+                    videoUrl: "videos/Specials/PMappa/236P-optimal.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+            ]
+        }, 
         {
-            id: "K_Mappa",
+            id: "K-Mappa",
             input: "236K",
-            label: "236K Starter",
-            situation: "On the ground",
-            combos: []
+            label: "Kmappa Starter",
+            situation: null,
+            combos: [
+                {
+                    id: "236K-counterhit",
+                    notationString: "CH 236K > 5K 236K",
+                    damage: 90,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "Basic counterhit confirm",
+                    videoUrl: "videos/Specials/KMappa/236K-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "236K-counterhit-2",
+                    notationString: "CH 236K > 5K 6H 214P~P W!",
+                    damage: 136,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "When closer to the corner, you can confirm 5K into 6H pilebunker for a wallbreak.",
+                    videoUrl: "videos/Specials/KMappa/236K-counterhit-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "236K-corner-counterhit",
+                    notationString: "CH 236K > C.S dl 2S 2H 214P~P > C.S 6H 236K W!",
+                    damage: 181,
+                    meterCost: 0,
+                    difficulty: "Medium",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "Replace the last 236K with delayed Super Mappa Hunch for optimal ender.",
+                    videoUrl: "videos/Specials/KMappa/236K-corner-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "236K-metered",
+                    notationString: "236K > 66RRC > 2S 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 196,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Universal confirm from anywhere, including counterhit. Replace first 2H with 2S against big bodies.",
+                    videoUrl: "videos/Specials/KMappa/236K-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "236K-metered-optimal",
+                    notationString: "236K > 66RRC > 66 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 208,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "Universal midscreen confirm, works on big bodies.",
+                    videoUrl: "videos/Specials/KMappa/236K-metered-optimal.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }
+            ]
         },
         {
-            id: "Dandy",
-            input: "214X~X",
-            label: "Dandy Followup Starters",
-            situation: "On the ground",
-            combos: []
+            id: "Pilebunker",
+            input: "214X~P",
+            label: "Pilebunker starter",
+            situation: null,
+            combos: [ 
+                {
+                    id: "Pilebunker-counterhit",
+                    notationString: "CH 214X~P > 632146 Dash 9P W!",
+                    damage: 135,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "In some midrange spacings, you can convert a counterhit pilebunker into another for a wallbreak. The closer you are to the corner, the less you need a kara dandy.",
+                    videoUrl: "videos/Specials/Pilebunker/Pilebunker-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "Pilebunker-metered",
+                    notationString: "214X~P > 66RRC > 66 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 238,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "The quintessential pilebunker confirm. Has two separate manual timed variants as well. This combo will drop on Sin and Happy Chaos.",
+                    videoUrl: "videos/Specials/Pilebunker/Pilebunker-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "Pilebunker-metered-2",
+                    notationString: "214X~P > 66RRC > [4] 214P~P > C.S 2H 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 238,
+                    meterCost: 50,
+                    difficulty: "Hard",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "Useful when you have corner advantage so that you avoid being bursted into the corner after the second pilebunker.",
+                    videoUrl: "videos/Specials/Pilebunker/Pilebunker-metered-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "Pilebunker-metered-3",
+                    notationString: "214X~P > 66RRC > 214K dl P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 238,
+                    meterCost: 50,
+                    difficulty: "Hard",
+                    situation: "Midscren",
+                    isOptimal: true,
+                    notes: "Useful when seeking corner carry or to get out of the corner.",
+                    videoUrl: "videos/Specials/Pilebunker/Pilebunker-metered-3.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+            ]
         },
-    ]
+        {
+            id: "It's late",
+            input: "214X~S",
+            label: "It's Late Starter",
+            situation: null,
+            combos: [ 
+                {
+                    id: "It's-late-counterhit",
+                    notationString: "214X~S > [4] 2S 2H 214P~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 204,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "I honestly don't have a good visual tell for if this combo will hit or not. I would recommend just grinding out the muscle memory at different spacings.",
+                    videoUrl: "videos/Specials/It's Late/It's-late-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "It's-late-counterhit-2",
+                    notationString: "214X~S > C.S 5[D] > 2S 214K~P > C.S 2S 2H 214P~P.",
+                    damage: 198,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "Only works if the overhead is right up against the opponent.",
+                    videoUrl: "videos/Specials/It's Late/It's-late-counterhit-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "It's-late-metered",
+                    notationString: "214X~S > 66PRC > C.S dl 2S 214K~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 197,
+                    meterCost: 50,
+                    difficulty: "Medium",
+                    situation: null,
+                    isOptimal: false,
+                    notes: "Similar timing to the low, works well with the delayed PRC strike throw you do with guard crush.",
+                    videoUrl: "videos/Specials/It's Late/It's-late-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "It's-late-metered-2",
+                    notationString: "214X~S > 66RRC > [4] 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 214,
+                    meterCost: 50,
+                    difficulty: "Hard",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "Universal confirm using red roman cancel, can substitute for the other manual timed extension.",
+                    videoUrl: "videos/Specials/It's Late/It's-late-metered-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+            ]
+        },
+        {
+            id: "Bump Ahead",
+            input: "214X~K",
+            label: "Bump Ahead Starter",
+            situation: null,
+            combos: [ 
+                 {
+                    id: "Bump-Ahead-counterhit",
+                    notationString: "CH 214X~K > [4] 2S 2H 214P~P > C.S dl 2S 2H 214~P > C.S 2S 2H 214P~P",
+                    damage: 194,
+                    meterCost: 0,
+                    difficulty: "Hard",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "I found this to be the most consistent way to time this, but it has many ways to make it work. It is inconsistent, however.",
+                    videoUrl: "videos/Specials/Bump Ahead/Bump-ahead-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "Bump-Ahead-counterhit-2",
+                    notationString: "CH 214X~K > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 183,
+                    meterCost: 0,
+                    difficulty: "Medium",
+                    situation: "CH",
+                    isOptimal: false,
+                    notes: "Easier than the optimal, but still requires a manual timing. May need a microwalk before the C.S, which will change how long you delay the 2S.",
+                    videoUrl: "videos/Specials/Bump Ahead/Bump-ahead-counterhit-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "Bump-Ahead-metered",
+                    notationString: "214X~K > 66PRC C.S dl 2S 214K~P > C.S dl 2S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 190,
+                    meterCost: 50,
+                    difficulty: "Medium",
+                    situation: null,
+                    isOptimal: true,
+                    notes: "This is the easiest way to hit confirm the low while still getting meaningful damage.",
+                    videoUrl: "videos/Specials/Bump Ahead/Bump-ahead-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "Bump-Ahead-metered-2",
+                    notationString: "214X~K > 66RRC > [4] 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 206,
+                    meterCost: 50,
+                    difficulty: "Hard",
+                    situation: "Midscreen",
+                    isOptimal: false,
+                    notes: "Can be substituted with the other manual timed extension.",
+                    videoUrl: "videos/Specials/Bump Ahead/Bump-ahead-counterhit-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+            ]
+        }, 
+        {
+            id: "Master's Hammer",
+            input: "214K~H",
+            label: "Master's Hammer Starter",
+            situation: null,
+            combos: [ 
+                {
+                    id: "Master's-hammer-counterhit",
+                    notationString: "CH 214X~H > [6] 2S 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 216,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "Universal confirm off of mistimed throws on Master's Hammer. Switch the first 2H with 2S against big bodies.",
+                    videoUrl: "videos/Specials/Master's Hammer/Master's-hammer-counterhit.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "Master's-hammer-counterhit-2",
+                    notationString: "CH 214X~H > 214P~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 227,
+                    meterCost: 0,
+                    difficulty: "Easy",
+                    situation: "CH",
+                    isOptimal: true,
+                    notes: "If you hit Master's Hammer further back, you can extend with pilebunker instead. It doesn't add meaningful damage, but can be better for routing away from burst.",
+                    videoUrl: "videos/Specials/Master's Hammer/Master's-hammer-counterhit-2.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                },
+                {
+                    id: "Master's-hammer-metered",
+                    notationString: "214X~H > 66PRC > 214K~P > C.S 2H 214P~P > C.S 2S 2H 214P~P",
+                    damage: 222,
+                    meterCost: 50,
+                    difficulty: "Easy",
+                    situation: "Midscreen",
+                    isOptimal: true,
+                    notes: "Does the same damage as RRC routes and lets you hit confirm with an easier window.",
+                    videoUrl: "videos/Specials/Master's Hammer/Master's-hammer-metered.webm",
+                    videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
+                }
+            ]
+        }
+    ] 
 };

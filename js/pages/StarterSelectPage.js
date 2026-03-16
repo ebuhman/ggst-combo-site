@@ -31,7 +31,27 @@ export class StarterSelectPage {
         })
 
         page.appendChild(grid);
+
+        const resourceButton = this.buildResourcesButton();
+        page.appendChild(resourceButton);
+        
         return page;
+    }
+
+    buildResourcesButton() {
+        const button = document.createElement("button");
+        button.classList.add("resource-button");
+
+        const buttonSpan = document.createElement("span");
+        buttonSpan.textContent = "Resources";
+        buttonSpan.classList.add("resource-text");
+        
+        button.appendChild(buttonSpan);
+
+        button.addEventListener("click", () => {
+            this.router.navigate("/resources")
+        });
+        return button;
     }
 
     buildStarterButton(starter) {
