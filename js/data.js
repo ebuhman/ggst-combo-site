@@ -225,7 +225,7 @@ export const characterData = {
                     situation: "CH",
                     isOptimal: true,
                     notes: "Optimal confirm with meter if you can't get the meterless route.",
-                    videoUrl: "videos/P_Normals/6P/6P-metered-counterhit.webm",
+                    videoUrl: "videos/P_Normals/6P/6P-counterhit-metered.webm",
                     videoFallbackImage: "images/5P/GGST_Slayer_5P.png"
                 }
             ]
